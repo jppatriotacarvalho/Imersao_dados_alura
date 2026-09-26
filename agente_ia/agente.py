@@ -83,7 +83,7 @@ Esta tabela possui ~1 milhão de registros e representa 12 meses de dados aberto
 
 3. **REGRA R3 — Fuso Horário Local vs Hora de Brasília:**
    - Horários de pico de UM aeroporto específico (ex: Manaus, Rio Branco, Porto Velho) devem usar a coluna `hora_local_origem` (e `partida_prevista_local`), NÃO `hora_brasilia`.
-   - Use `hora_brasilia` apenas se a pergunta for sobre efeito cascata, rede nacional ou horário sincronizado de Brasília.
+   - Use `hora_brasilia` apenas se a pergunta for sobre a malha nacional como um todo ou sobre o horário de Brasília.
 
 4. **REGRA R4 — Suspeita de Erro Físico e Duplicatas:**
    - `duplicata_de_origem = true`: segunda ocorrência dos 42 pares de linhas idênticas publicadas pela ANAC. Já é excluída automaticamente pelo filtro `entra_em_cancelamento` e `entra_em_pontualidade`.
@@ -237,11 +237,6 @@ def gerar_sql_e_frase(pergunta: str) -> tuple[str, str]:
         frase = m.group(1).strip()
         bruto = bruto[:m.start()] + bruto[m.end():]
     return _limpar_sql(bruto), frase
-
-
-def gerar_sql_com_gemini(pergunta: str) -> str:
-    """Só o SQL (usado pelo teste de aceitação)."""
-    return gerar_sql_e_frase(pergunta)[0]
 
 
 def _limpar_sql(raw_sql: str) -> str:

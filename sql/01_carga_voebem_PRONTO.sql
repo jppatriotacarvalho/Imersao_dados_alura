@@ -137,7 +137,7 @@ SET
   indice_confiabilidade = NULLIF(@indice_confiabilidade, '');
 
 
--- kpi_aeroporto_hora: 10.021 linhas  (base do heatmap de cascata)
+-- kpi_aeroporto_hora: 10.021 linhas  (base do grafico por hora e do mapa de calor)
 -- hora_local_origem e NULA para aeroporto estrangeiro — de proposito
 LOAD DATA INFILE '/var/lib/mysql-files/kpi_aeroporto_hora.csv'
 INTO TABLE kpi_aeroporto_hora

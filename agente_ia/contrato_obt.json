@@ -105,7 +105,7 @@
   },
   {
     "coluna": "hora_brasilia",
-    "comentario": "Hora cheia (0-23) da partida programada em hora de Brasilia. E a coluna certa para analisar propagacao de atraso pela REDE nacional ao longo do dia, porque coloca todos os aeroportos no mesmo relogio."
+    "comentario": "Hora cheia (0-23) da partida programada em hora de Brasilia. E a coluna certa para comparar a malha nacional hora a hora, porque coloca todos os aeroportos no mesmo relogio."
   },
   {
     "coluna": "partida_prevista_local",
@@ -225,11 +225,11 @@
   },
   {
     "coluna": "cancelamento_operacional",
-    "comentario": "Verdadeiro quando houve cancelamento de verdade: CANCELADO e NAO voo-fantasma. E a coluna para qualquer taxa de cancelamento publicada. Usando esta em vez de voo_cancelado, a Iberia sai de 54,61 por cento para 6,46 por cento."
+    "comentario": "Verdadeiro quando a situacao e CANCELADO e o registro NAO e voo-fantasma. E a coluna para qualquer taxa de cancelamento publicada. Usando esta em vez de voo_cancelado, a Iberia sai de 54,61 por cento para 6,46 por cento."
   },
   {
     "coluna": "dia_atipico",
-    "comentario": "Regra R5. Verdadeiro quando a taxa nacional de cancelamento do dia passou de 3 vezes a mediana do periodo (2,72 por cento). Separa evento sistemico de desempenho da companhia: em 10/12/2025 foram cancelados 17,85 por cento dos voos."
+    "comentario": "Regra R5. Verdadeiro quando a taxa nacional de cancelamento do dia passou de 3 vezes a mediana do periodo (2,72 por cento). Marca os dias fora do padrao: em 10/12/2025 foram cancelados 17,85 por cento dos voos."
   },
   {
     "coluna": "suspeita_erro_horario",

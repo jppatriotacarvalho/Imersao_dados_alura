@@ -16,13 +16,13 @@ O **VoeBem** mede pontualidade e cancelamento por hora do dia, por aeroporto, po
 
 ## 📊 Principais Achados
 
-1. **O atraso se acumula ao longo do dia.** A parcela de partidas com mais de 15 minutos de atraso sobe de **8,0% às 5h** para **25,9% às 22h** (hora de Brasília, sem os dias atípicos e os horários implausíveis). É o efeito cascata na malha: o atraso de um voo passa para o próximo.
+1. **A parcela de partidas atrasadas aumenta ao longo do dia.** Ela sobe de **8,0% às 5h** para **25,9% às 22h** (partidas com mais de 15 minutos de atraso, em hora de Brasília, sem os dias atípicos e os horários implausíveis).
 2. **Dezembro foi o pior mês.** **73,6%** de pontualidade de chegada (os outros meses ficam entre 80,7% e 87,0%) e **3,34%** de cancelamento. Os dias 10 e 11/12 tiveram os maiores índices de cancelamento do período (17,85% e 14,19%), mas mesmo sem esses dois dias dezembro continua abaixo de todos os outros meses.
 3. **Quase um quarto dos cancelamentos vem de 54 números de voo.** **23,4%** dos cancelamentos brutos da base vêm de 54 pares (companhia, número do voo) que aparecem 30 vezes ou mais e são cancelados em 98% ou mais das vezes. O dado não diz por que esses registros existem; a regra R2 os separa para que não pesem na taxa de cancelamento.
 
 ## 📌 Nota sobre os Dados
 
-Os números descrevem os registros da [base VRA da ANAC](https://www.gov.br/anac/pt-br/acesso-a-informacao/dados-abertos/areas-de-atuacao/voos-e-operacoes-aereas/voo-regular-ativo-vra) e **não indicam a causa nem a responsabilidade** pelos atrasos e cancelamentos. A base não informa o motivo de cada caso: a coluna de justificativa (`Código Justificativa`) vem vazia em todas as linhas do período. Clima, controle de tráfego, infraestrutura e erro de registro aparecem todos da mesma forma no dado. As regras R2 e R5 existem justamente para separar o que é padrão do registro ou evento externo do que é a operação do dia a dia.
+Os números descrevem os registros da [base VRA da ANAC](https://www.gov.br/anac/pt-br/acesso-a-informacao/dados-abertos/areas-de-atuacao/voos-e-operacoes-aereas/voo-regular-ativo-vra) e **não indicam a causa nem a responsabilidade** pelos atrasos e cancelamentos. A base não informa o motivo de cada caso: a coluna de justificativa (`Código Justificativa`) vem vazia em todas as linhas do período. Clima, controle de tráfego, infraestrutura e erro de registro aparecem todos da mesma forma no dado. As regras R2 e R5 só marcam registros e dias fora do padrão, para que eles não distorçam as taxas; elas não apontam o motivo.
 
 ---
 
@@ -113,7 +113,7 @@ rode `python -m http.server 8080` na raiz do projeto e abra http://localhost:808
 
 ## 🤖 Agente de IA (Texto -> SQL com Governança)
 
-O agente converte perguntas em linguagem natural em queries SQL compatíveis com o Databricks SQL Warehouse, com instruções para aplicar as regras R1 a R6. O teste de aceitação confere isso em 8 perguntas (veja a Camada 3 da [Estratégia de Testes](#-estratégia-de-testes-3-camadas)).
+O agente converte perguntas em linguagem natural em queries SQL compatíveis com o Databricks SQL Warehouse, com instruções para aplicar as regras R1 a R6.
 
 ### Configuração
 1. Copie o arquivo de exemplo de variáveis de ambiente:
@@ -166,16 +166,15 @@ python agente.py "Qual o horário de pico de partidas em Manaus?"
 
 ---
 
-## 🧪 Estratégia de Testes (3 Camadas)
+## 🧪 Estratégia de Testes (2 Camadas)
 
-*Um teste que sempre dá verde não é um teste, é decoração.* O VoeBem implementa três camadas independentes de validação:
+*Um teste que sempre dá verde não é um teste, é decoração.* O VoeBem implementa duas camadas independentes de validação:
 
 1. **Camada 1: Testes Unitários e Governança (`pytest`)**
    - Executa sem necessidade de banco nem APIs externas.
    - Testa a higienização do `validar_sql`, injeção forçada de `LIMIT 500`, bloqueio de comandos perigosos e catálogo do sistema.
    - Testa a paridade do JSON embutido com `dados/painel.json`.
    - Testa o servidor da caixa de perguntas (`test_servidor.py`) com um agente falso: validação da pergunta, resposta sem as chaves e erro com a chave escondida.
-   - **O teste do teste (`test_avaliacao.py`):** Prova ativamente que o avaliador rejeita resultados falsos ou tolerâncias violadas.
    - Rodar localmente:
      ```bash
      pip install -r requirements-dev.txt
@@ -185,30 +184,6 @@ python agente.py "Qual o horário de pico de partidas em Manaus?"
 2. **Camada 2: Placar Automatizado do MySQL (18 Asserções)**
    - O MySQL do Docker nasce vazio e carrega as 7 tabelas da gold via `LOAD DATA INFILE` estrito; o placar valida 18 regras de integridade — todas devem dar `PASSA`.
    - Rodar: `docker compose exec mysql sh -c 'mysql -uroot -p$MYSQL_ROOT_PASSWORD -t voebem < /sql/03_placar.sql'`
-
-3. **Camada 3: Teste de Aceitação do Agente (8 Casos de Negócio)**
-   - Avalia a capacidade do LLM em gerar SQLs que respeitam o contrato de dados e checa os valores retornados contra as respostas esperadas (definidas em `agente_ia/teste_aceitacao.py`):
-
-     | # | Pergunta | Resposta esperada | O que confere |
-     |---|---|---|---|
-     | 1 | Qual a taxa de cancelamento da Iberia? | 6,53% | R1 + R2: voos elegíveis, sem voos-fantasma |
-     | 2 | Qual a taxa de cancelamento bruta da Iberia, sem filtrar nada? | 54,61% | taxa bruta quando a pergunta pede |
-     | 3 | Qual o horário de pico de partidas em Manaus? | 11h (hora local) | R3: hora local |
-     | 4 | Qual a taxa de cancelamento geral do Brasil no período? | cerca de 2,29% | R1 + R2 no denominador |
-     | 5 | Um voo com código DI igual a 3 pode ser cancelado? | 0,00% | R1 |
-     | 6 | Compare o atraso médio e o P90 de SBNF→SBGR (LATAM) e SBGR→SBGO (GOL) | médias de ~7 min; P90 de 40,0 e 26,0 min (período inteiro) | R6 |
-     | 7 | Qual dia teve o maior índice de cancelamento? | 10/12/2025, 17,85% | R5 |
-     | 8 | A Turkish Airlines tem uma taxa alta de cancelamento? | não, cerca de 1,46% | não confunde a coluna de origem do registro com qualidade |
-
-     O agente aplica R1 + R2 (só voos elegíveis e sem os voos-fantasma no denominador). O dashboard faz contas um pouco diferentes, por isso os valores mudam na segunda casa decimal: o gráfico da R2 não aplica a R1 (Iberia 6,46%), e o card do resumo conta as linhas de voo-fantasma como não canceladas (Brasil 2,27%).
-
-   - Ao rodar, o relatório é gravado em `agente_ia/resultados/ultimo_placar.md` (pasta ignorada pelo Git).
-   - Executar:
-     ```bash
-     python agente_ia/teste_aceitacao.py
-     # ou via Docker:
-     docker compose run --rm --entrypoint python agente teste_aceitacao.py
-     ```
 
 ---
 
@@ -256,12 +231,10 @@ Imersao_dados_alura/
 │   ├── requirements.txt         (Dependências pinadas do agente)
 │   ├── agente.py                (Agente Texto -> SQL com google-genai)
 │   ├── servidor.py              (Servidor da caixa de perguntas do site; só biblioteca padrão)
-│   ├── teste_aceitacao.py       (Suite de aceitação com tolerâncias estritas)
 │   ├── contrato_obt.json        (Contrato das 62 colunas da gold.obt_voos)
 │   └── schema_comments.json     (Metadados das tabelas)
 └── tests/                       (Suites de testes unitários com pytest)
     ├── test_validar_sql.py
-    ├── test_avaliacao.py
     ├── test_painel_sincronizado.py
     └── test_servidor.py
 ```

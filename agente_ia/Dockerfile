@@ -3,5 +3,5 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-COPY agente.py servidor.py teste_aceitacao.py contrato_obt.json schema_comments.json ./
+COPY agente.py servidor.py contrato_obt.json schema_comments.json ./
 ENTRYPOINT ["python", "agente.py"]

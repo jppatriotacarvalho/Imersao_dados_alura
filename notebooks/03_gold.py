@@ -11,10 +11,10 @@
 # MAGIC | # | regra | o que decide | evidência |
 # MAGIC |---|---|---|---|
 # MAGIC | **R1** | `populacao_kpi` | quem entra no denominador | cancelamento é 0,00% em todo DI ≠ 0 e 2 |
-# MAGIC | **R2** | `voo_fantasma` | o que é cancelamento de verdade | 0,67% da base = 23,4% dos cancelamentos |
+# MAGIC | **R2** | `voo_fantasma` | quais cancelamentos entram na taxa | 0,67% da base = 23,4% dos cancelamentos |
 # MAGIC | **R3** | `hora_local_origem` | a que horas o voo *realmente* sai | 42.235 etapas com hora deslocada |
 # MAGIC | **R4** | `suspeita_erro_horario` | qual horário é implausível | 7.532 voos fora de 200–950 km/h |
-# MAGIC | **R5** | `dia_atipico` | o que é desempenho da companhia e o que é evento | 10/12/2025: 17,85% vs mediana 2,72% |
+# MAGIC | **R5** | `dia_atipico` | quais dias fogem do padrão | 10/12/2025: 17,85% vs mediana 2,72% |
 # MAGIC | **R6** | `indice_confiabilidade_rota` | o que é uma rota confiável | a média esconde o p90 |
 # MAGIC
 # MAGIC **Roteiro deste notebook:**
@@ -86,8 +86,8 @@ spark.sql(f"CREATE VOLUME IF NOT EXISTS {CATALOGO}.gold.export")
 # MAGIC    descrição errada não é imprecisão — é defeito funcional.
 # MAGIC 2. **Análise por aeroporto do Norte e Centro-Oeste fica correta.** Pico e faixa horária dos
 # MAGIC    aeroportos fora do UTC−3 (34 no VRA) estavam 1h ou 2h deslocados.
-# MAGIC 3. **As duas perguntas ficam separadas.** `hora_brasilia` para propagação na rede (todo mundo no
-# MAGIC    mesmo relógio, que é o que a cascata exige); `hora_local_origem` para o pico de um aeroporto.
+# MAGIC 3. **As duas perguntas ficam separadas.** `hora_brasilia` para comparar a malha nacional hora a
+# MAGIC    hora (todo mundo no mesmo relógio); `hora_local_origem` para o pico de um aeroporto.
 
 # COMMAND ----------
 
@@ -281,12 +281,12 @@ display(spark.sql(f"""
 
 # MAGIC %md
 # MAGIC ---
-# MAGIC ## R5 — `dia_atipico`: separar o evento do desempenho
+# MAGIC ## R5 — `dia_atipico`: marcar os dias fora do padrão
 # MAGIC
 # MAGIC Em 10/12/2025, **17,85%** dos voos foram cancelados. No dia seguinte, 14,19%. A mediana diária do
 # MAGIC período é **2,72%**.
 # MAGIC
-# MAGIC Sem essa flag, dezembro pune a companhia por um evento que não é dela. Com ela, os dias atípicos
+# MAGIC Sem essa flag, três dias fora do padrão pesam nas médias do período. Com ela, os dias atípicos
 # MAGIC ficam marcados: o painel mostra a taxa diária com a mediana e o corte da R5, e os agregados de
 # MAGIC horário (`kpi_aeroporto_hora`) já saem sem esses dias.
 # MAGIC
@@ -761,7 +761,7 @@ for t in ["kpi_diario", "kpi_rota_mensal", "kpi_aeroporto_hora"]:
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ### O efeito cascata, agora limpo
+# MAGIC ### Atraso por hora do dia, sem os dias atípicos
 # MAGIC
 # MAGIC Só voo programado, fora de dia atípico, sem horário suspeito. É o gráfico da seção *Horário do voo*
 # MAGIC do dashboard: a taxa de atraso das partidas sobe de 8,0% às 5h para 25,9% às 22h (25,7% às 23h).
@@ -973,7 +973,7 @@ COMENTARIOS_OBT = {
 
     "partida_prevista_brasilia": "Horario programado de partida em HORA DE BRASILIA (UTC-3). NAO e a hora local do aeroporto: todos os horarios do VRA usam um relogio unico. Verificado por ida e volta terem a mesma duracao em rotas que cruzam fuso.",
     "partida_prevista_data":     "Data programada da partida, hora de Brasilia. Use para serie diaria e recorte de periodo.",
-    "hora_brasilia":             "Hora cheia (0-23) da partida programada em hora de Brasilia. E a coluna certa para analisar propagacao de atraso pela REDE nacional ao longo do dia, porque coloca todos os aeroportos no mesmo relogio.",
+    "hora_brasilia":             "Hora cheia (0-23) da partida programada em hora de Brasilia. E a coluna certa para comparar a malha nacional hora a hora, porque coloca todos os aeroportos no mesmo relogio.",
     "partida_prevista_local":    "Horario programado de partida convertido para a HORA LOCAL do aeroporto de origem. Nulo para aeroporto estrangeiro, cujo fuso varia com horario de verao e nao foi assumido.",
     "hora_local_origem":         "Hora cheia (0-23) da partida no relogio de quem esta no aeroporto de origem. E a coluna certa para perguntar o horario de pico de UM aeroporto. Difere de hora_brasilia em 42.235 etapas (4,8 por cento), as que partem dos 79 aerodromos fora do UTC-3: o pico de Manaus sai de 12h para 11h e o de Rio Branco de 02h para 00h.",
     "chegada_prevista_brasilia": "Horario programado de chegada, hora de Brasilia. Nao e a hora local do destino.",
@@ -1005,8 +1005,8 @@ COMENTARIOS_OBT = {
     "etapa_duplicada_anac":      "Verdadeiro quando DI='D', codigo com que a propria ANAC marca Etapa de Voo Duplicada. 694 linhas, todas em cargueiras. Nao conte como voo.",
     "duplicata_de_origem":       "Verdadeiro na SEGUNDA ocorrencia de uma linha que a ANAC publicou repetida: 42 pares rigorosamente identicos (mesma companhia, voo, rota, horario previsto e real). Diferente de etapa_duplicada_anac, que e uma marcacao da propria fonte. A linha fica na tabela, mas sai do denominador via entra_em_pontualidade e entra_em_cancelamento.",
     "voo_fantasma":              "Regra R2. Verdadeiro quando o par companhia+numero_voo tem 30 ocorrencias ou mais no periodo E 98 por cento ou mais delas canceladas. Sao 54 pares e 6.813 linhas (0,67 por cento da base) que respondem por 23,4 por cento dos cancelamentos do pais. Apenas 2 dessas linhas tem partida real. O dado nao informa o motivo desses registros.",
-    "cancelamento_operacional":  "Verdadeiro quando houve cancelamento de verdade: CANCELADO e NAO voo-fantasma. E a coluna para qualquer taxa de cancelamento publicada. Usando esta em vez de voo_cancelado, a Iberia sai de 54,61 por cento para 6,46 por cento.",
-    "dia_atipico":               "Regra R5. Verdadeiro quando a taxa nacional de cancelamento do dia passou de 3 vezes a mediana do periodo (2,72 por cento). Separa evento sistemico de desempenho da companhia: em 10/12/2025 foram cancelados 17,85 por cento dos voos.",
+    "cancelamento_operacional":  "Verdadeiro quando a situacao e CANCELADO e o registro NAO e voo-fantasma. E a coluna para qualquer taxa de cancelamento publicada. Usando esta em vez de voo_cancelado, a Iberia sai de 54,61 por cento para 6,46 por cento.",
+    "dia_atipico":               "Regra R5. Verdadeiro quando a taxa nacional de cancelamento do dia passou de 3 vezes a mediana do periodo (2,72 por cento). Marca os dias fora do padrao: em 10/12/2025 foram cancelados 17,85 por cento dos voos.",
     "suspeita_erro_horario":     "Regra R4. Verdadeiro quando a velocidade media programada fica fora de 200-950 km/h, faixa que o projeto considera plausivel; sugere erro de horario ou de data na origem. 7.532 voos. Pega o que a faixa de atraso -2h a +24h deixa passar.",
     "destino_opera_a_noite":     "Falso quando o aeroporto de destino nao tem operacao noturna (130 aerodromos no cadastro da ANAC, 17 entre os aeroportos do VRA). A taxa de cancelamento dos voos para esses destinos e 22,36 por cento, contra 2,87 por cento geral; o dado nao informa o motivo.",
     "registro_malha_internacional": "Verdadeiro quando o registro veio do sistema de malha internacional, identificado pela fracao de segundo no horario previsto do arquivo. E LINHAGEM, nao qualidade: a Turkish tem 98,8 por cento dos registros assim e cancela so 1,44 por cento. Nao use como filtro de confianca - use voo_fantasma.",
@@ -1112,7 +1112,7 @@ TABELAS_GOLD = {
     ),
     f"{CATALOGO}.gold.kpi_aeroporto_hora": (
         "Gold - agregado por aeroporto, hora e dia da semana, so com voo programado fora de dia atipico. "
-        "Base do heatmap de efeito cascata. Traz hora de Brasilia e hora local lado a lado.",
+        "Base do grafico por hora e do mapa de calor hora x dia. Traz hora de Brasilia e hora local lado a lado.",
         {"camada": "gold", "dominio": "aviacao", "consumo": "dashboard", "grao": "aeroporto_hora"},
     ),
     f"{CATALOGO}.gold.voos_fantasma": (
@@ -1298,7 +1298,7 @@ painel = {
                                   WHEN chegada_pontual IS NOT NULL THEN 0 END), 2) AS pontualidade_chegada_pct
         FROM {CATALOGO}.gold.obt_voos"""),
 
-    "cascata_por_hora": linhas_de(f"""
+    "atraso_por_hora": linhas_de(f"""
         SELECT hora_brasilia,
                SUM(voos)                                          AS voos,
                ROUND(SUM(voos*pontualidade_pct)

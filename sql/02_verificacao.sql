@@ -86,9 +86,9 @@ FROM kpi_rota_mensal;
 
 
 -- ---------------------------------------------------------------------
--- A. EFEITO CASCATA — a pergunta "a que horas vale voar?"
+-- A. ATRASO POR HORA DO DIA
 -- ---------------------------------------------------------------------
--- Vira a pagina 2 do dashboard. Esperado: sobe de 8,0% as 5h para 25,9% as 22h (25,7% as 23h).
+-- E o grafico da secao Horario do voo do dashboard. Esperado: sobe de 8,0% as 5h para 25,9% as 22h (25,7% as 23h).
 -- O denominador so conta os grupos com valor: os 306 grupos com pontualidade
 -- nula nao podem entrar como se fossem 0% pontuais.
 SELECT
@@ -167,7 +167,7 @@ ORDER BY atraso_p90 DESC;
 
 
 -- ---------------------------------------------------------------------
--- E. DIA ATIPICO — o que e evento e o que e desempenho
+-- E. DIA ATIPICO — os dias fora do padrao
 -- ---------------------------------------------------------------------
 SELECT dia, voos, cancelados, taxa_pct, mediana_periodo_pct,
        vezes_a_mediana, dia_atipico

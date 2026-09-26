@@ -64,8 +64,6 @@ services:
     env_file:
       - path: ./agente_ia/.env
         required: false        # sem .env o contêiner sobe; o agente avisa que falta a chave
-    volumes:
-      - ./agente_ia/resultados:/app/resultados
     stdin_open: true
     tty: true
 

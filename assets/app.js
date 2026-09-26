@@ -280,7 +280,7 @@
   }
 
   function graficoHora(d) {
-    const h = d.cascata_por_hora;
+    const h = d.atraso_por_hora;
     const atras = h.map((x) => +(100 - parseFloat(x.pontualidade_pct)).toFixed(1));
     const iMax = atras.indexOf(Math.max(...atras));
     const iMin = atras.indexOf(Math.min(...atras));
