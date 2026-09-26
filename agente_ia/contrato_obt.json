@@ -1,0 +1,250 @@
+[
+  {
+    "coluna": "_id_etapa",
+    "comentario": "Identificador unico da etapa: hash das colunas de identificacao mais os horarios. E a chave de carga incremental. A chave de negocio (empresa+voo+rota+previsto) NAO e unica: ha 137 colisoes."
+  },
+  {
+    "coluna": "icao_empresa",
+    "comentario": "Codigo ICAO de tres letras da companhia que operou a etapa. Use nome_companhia para exibir; este codigo serve para filtro exato."
+  },
+  {
+    "coluna": "nome_companhia",
+    "comentario": "Razao social da companhia. Quando o codigo nao existe no cadastro da ANAC, traz COMPANHIA NAO CADASTRADA seguida do codigo, em vez de vazio. Ocorre em 7 codigos e 69 voos."
+  },
+  {
+    "coluna": "numero_voo",
+    "comentario": "Numero comercial do voo. NAO e identificador unico: repete todos os dias, tem zero a esquerda e alguns comecam com letra."
+  },
+  {
+    "coluna": "codigo_di",
+    "comentario": "Codigo de autorizacao (DI) da etapa. E o campo que diz se o voo era PROGRAMADO: DI=0 tem horario previsto em 100 por cento das linhas, e nenhum outro DI tem. O codigo 1 aparece no dado e nao consta na tabela oficial da ANAC."
+  },
+  {
+    "coluna": "descricao_di",
+    "comentario": "Tipo da etapa por extenso: regular, extra, de retorno, charter, fretamento, duplicada. Quando o codigo nao esta catalogado pela ANAC, diz isso explicitamente."
+  },
+  {
+    "coluna": "codigo_tipo_linha",
+    "comentario": "Codigo do tipo de linha da ANAC: N e C domesticas, I e G internacionais."
+  },
+  {
+    "coluna": "descricao_tipo_linha",
+    "comentario": "Tipo de linha por extenso: Domestica Mista, Internacional Cargueira, etc."
+  },
+  {
+    "coluna": "escopo_voo",
+    "comentario": "Domestico ou Internacional, derivado do tipo de linha. E a coluna certa para comparar os dois universos."
+  },
+  {
+    "coluna": "natureza_voo",
+    "comentario": "Misto (passageiros) ou Cargueiro. Cargueiro tem perfil de horario e de cancelamento muito diferente: nao misture na mesma media."
+  },
+  {
+    "coluna": "icao_origem",
+    "comentario": "Codigo ICAO do aeroporto de partida. Use nome_aeroporto_origem para exibir."
+  },
+  {
+    "coluna": "nome_aeroporto_origem",
+    "comentario": "Nome do aeroporto de partida. Aeroporto estrangeiro nao consta no cadastro da ANAC e aparece como AEROPORTO FORA DO CADASTRO ANAC seguido do codigo."
+  },
+  {
+    "coluna": "praca_origem",
+    "comentario": "Municipio SERVIDO pelo aeroporto de partida, que pode ser diferente do municipio onde ele fica. E a coluna certa para analisar praca; municipio fisico agrupa errado."
+  },
+  {
+    "coluna": "uf_origem",
+    "comentario": "Unidade federativa do aeroporto de partida, POR EXTENSO (Sao Paulo, Ceara), como a ANAC publica. Nao e a sigla: WHERE uf_origem = 'SP' devolve zero linhas."
+  },
+  {
+    "coluna": "pais_origem",
+    "comentario": "Brasil ou Exterior, deduzido do prefixo do codigo ICAO."
+  },
+  {
+    "coluna": "icao_destino",
+    "comentario": "Codigo ICAO do aeroporto de chegada. Use nome_aeroporto_destino para exibir."
+  },
+  {
+    "coluna": "nome_aeroporto_destino",
+    "comentario": "Nome do aeroporto de chegada. Mesma regra de fallback da origem."
+  },
+  {
+    "coluna": "praca_destino",
+    "comentario": "Municipio servido pelo aeroporto de chegada."
+  },
+  {
+    "coluna": "uf_destino",
+    "comentario": "Unidade federativa do aeroporto de chegada, por extenso."
+  },
+  {
+    "coluna": "pais_destino",
+    "comentario": "Brasil ou Exterior para o aeroporto de chegada."
+  },
+  {
+    "coluna": "rota_icao",
+    "comentario": "Rota no formato ORIGEM - DESTINO usando codigos ICAO. Chave estavel para agrupar por rota; a rota inversa e uma rota diferente."
+  },
+  {
+    "coluna": "rota_pracas",
+    "comentario": "Rota em nomes de praca, para leitura humana. Aeroporto estrangeiro aparece pelo codigo ICAO."
+  },
+  {
+    "coluna": "km_rota",
+    "comentario": "Distancia de grande circulo entre origem e destino, em quilometros, calculada das coordenadas da ANAC. Nula quando alguma ponta nao esta no cadastro - cobre 80,8 por cento das etapas."
+  },
+  {
+    "coluna": "faixa_etapa",
+    "comentario": "curta (<400 km), media (400-1000), longa (1000-2000), muito_longa (>2000). Atraso de 20 minutos numa ponte aerea e outro fenomeno que 20 minutos num voo intercontinental: compare dentro da mesma faixa."
+  },
+  {
+    "coluna": "partida_prevista_brasilia",
+    "comentario": "Horario programado de partida em HORA DE BRASILIA (UTC-3). NAO e a hora local do aeroporto: todos os horarios do VRA usam um relogio unico. Verificado por ida e volta terem a mesma duracao em rotas que cruzam fuso."
+  },
+  {
+    "coluna": "partida_prevista_data",
+    "comentario": "Data programada da partida, hora de Brasilia. Use para serie diaria e recorte de periodo."
+  },
+  {
+    "coluna": "hora_brasilia",
+    "comentario": "Hora cheia (0-23) da partida programada em hora de Brasilia. E a coluna certa para analisar propagacao de atraso pela REDE nacional ao longo do dia, porque coloca todos os aeroportos no mesmo relogio."
+  },
+  {
+    "coluna": "partida_prevista_local",
+    "comentario": "Horario programado de partida convertido para a HORA LOCAL do aeroporto de origem. Nulo para aeroporto estrangeiro, cujo fuso varia com horario de verao e nao foi assumido."
+  },
+  {
+    "coluna": "hora_local_origem",
+    "comentario": "Hora cheia (0-23) da partida no relogio de quem esta no aeroporto de origem. E a coluna certa para perguntar o horario de pico de UM aeroporto. Difere de hora_brasilia em 42.235 etapas (4,8 por cento), as que partem dos 79 aerodromos fora do UTC-3: o pico de Manaus sai de 12h para 11h e o de Rio Branco de 02h para 00h."
+  },
+  {
+    "coluna": "chegada_prevista_brasilia",
+    "comentario": "Horario programado de chegada, hora de Brasilia. Nao e a hora local do destino."
+  },
+  {
+    "coluna": "chegada_prevista_local",
+    "comentario": "Horario programado de chegada na hora local do aeroporto de destino. Nulo para destino estrangeiro."
+  },
+  {
+    "coluna": "hora_local_destino",
+    "comentario": "Hora cheia da chegada no relogio do aeroporto de destino."
+  },
+  {
+    "coluna": "partida_real_brasilia",
+    "comentario": "Horario em que a aeronave efetivamente partiu, hora de Brasilia. Nulo em voo cancelado."
+  },
+  {
+    "coluna": "chegada_real_brasilia",
+    "comentario": "Horario em que a aeronave efetivamente pousou, hora de Brasilia. Nulo em voo cancelado."
+  },
+  {
+    "coluna": "dia_semana",
+    "comentario": "Dia da semana da partida programada, por extenso e em minusculas."
+  },
+  {
+    "coluna": "num_dia_semana",
+    "comentario": "Numero do dia da semana (1 = domingo), para ordenar graficos."
+  },
+  {
+    "coluna": "mes_referencia",
+    "comentario": "Primeiro dia do mes da partida programada, para agregacao mensal. Nulo nos voos sem horario previsto, que sao todos voos nao programados (DI diferente de 0)."
+  },
+  {
+    "coluna": "atraso_partida_min",
+    "comentario": "Atraso de partida em minutos: real menos programado. Negativo significa que saiu adiantado. Nulo em voo cancelado ou sem horario programado."
+  },
+  {
+    "coluna": "atraso_chegada_min",
+    "comentario": "Atraso de chegada em minutos: real menos programado. Negativo significa que pousou adiantado."
+  },
+  {
+    "coluna": "minutos_recuperados",
+    "comentario": "Atraso de partida menos atraso de chegada. Positivo significa que a etapa chegou MENOS ATRASADA do que saiu - e NAO que chegou no horario: 164 mil voos recuperaram tempo e ainda assim pousaram atrasados. Para saber se resolveu, use resolveu_atraso."
+  },
+  {
+    "coluna": "duracao_programada_min",
+    "comentario": "Minutos entre partida e chegada programadas. Como os dois horarios estao no mesmo relogio, este valor e o tempo de bloco real, sem distorcao de fuso."
+  },
+  {
+    "coluna": "duracao_real_min",
+    "comentario": "Minutos entre partida e chegada efetivas."
+  },
+  {
+    "coluna": "velocidade_programada_kmh",
+    "comentario": "km_rota dividido pela duracao programada. Mediana 498 km/h. Serve como controle de qualidade fisico, nao como metrica de negocio."
+  },
+  {
+    "coluna": "partida_pontual",
+    "comentario": "Verdadeiro quando a partida atrasou 15 minutos ou menos. Nulo quando NAO DA para avaliar: voo cancelado, sem horario programado, ou nao programado (DI diferente de 0). Nulo nunca deve ser contado como atraso."
+  },
+  {
+    "coluna": "chegada_pontual",
+    "comentario": "Verdadeiro quando a chegada atrasou 15 minutos ou menos. Mesma regra de nulo da partida."
+  },
+  {
+    "coluna": "classe_atraso",
+    "comentario": "Faixa do atraso de chegada: no_horario (ate 15 min), leve (ate 30), moderado (ate 60), severo (ate 120), critico (acima). Existe porque um booleano trata 16 minutos e 4 horas como a mesma coisa."
+  },
+  {
+    "coluna": "resolveu_atraso",
+    "comentario": "Verdadeiro quando a etapa recuperou tempo no ar E chegou pontual. E a coluna que responde se o atraso foi resolvido - minutos_recuperados sozinho nao responde isso."
+  },
+  {
+    "coluna": "situacao_voo",
+    "comentario": "Situacao informada pela companhia: REALIZADO ou CANCELADO. Leia junto com voo_fantasma: 23,4 por cento dos CANCELADO pertencem a voos-fantasma (regra R2)."
+  },
+  {
+    "coluna": "voo_realizado",
+    "comentario": "Verdadeiro quando a etapa foi realizada. Use como denominador de metricas operacionais."
+  },
+  {
+    "coluna": "voo_cancelado",
+    "comentario": "Verdadeiro quando a companhia declarou cancelamento. Para taxa de cancelamento use cancelamento_operacional, que exclui voo-fantasma."
+  },
+  {
+    "coluna": "voo_programado",
+    "comentario": "Verdadeiro quando DI=0, ou seja, o voo constava da malha programada. Regra R1. So voo programado tem horario previsto - zero excecoes em 974.802 linhas."
+  },
+  {
+    "coluna": "entra_em_pontualidade",
+    "comentario": "Filtro oficial do denominador de PONTUALIDADE: voo programado (DI=0) e primeira ocorrencia da linha. Voo extra ou de retorno nao tinha horario para cumprir, e linha repetida pela fonte nao e um segundo voo."
+  },
+  {
+    "coluna": "entra_em_cancelamento",
+    "comentario": "Filtro oficial do denominador de CANCELAMENTO: DI 0 ou 2, e primeira ocorrencia da linha. Nos demais DI a taxa de cancelamento e exatamente 0,00 por cento - voo nao programado nao pode ser cancelado, so existe no dado porque aconteceu."
+  },
+  {
+    "coluna": "etapa_duplicada_anac",
+    "comentario": "Verdadeiro quando DI='D', codigo com que a propria ANAC marca Etapa de Voo Duplicada. 694 linhas, todas em cargueiras. Nao conte como voo."
+  },
+  {
+    "coluna": "duplicata_de_origem",
+    "comentario": "Verdadeiro na SEGUNDA ocorrencia de uma linha que a ANAC publicou repetida: 42 pares rigorosamente identicos (mesma companhia, voo, rota, horario previsto e real). Diferente de etapa_duplicada_anac, que e uma marcacao da propria fonte. A linha fica na tabela, mas sai do denominador via entra_em_pontualidade e entra_em_cancelamento."
+  },
+  {
+    "coluna": "voo_fantasma",
+    "comentario": "Regra R2. Verdadeiro quando o par companhia+numero_voo tem 30 ocorrencias ou mais no periodo E 98 por cento ou mais delas canceladas. Sao 54 pares e 6.813 linhas (0,67 por cento da base) que respondem por 23,4 por cento dos cancelamentos do pais. Apenas 2 dessas linhas tem partida real. O dado nao informa o motivo desses registros."
+  },
+  {
+    "coluna": "cancelamento_operacional",
+    "comentario": "Verdadeiro quando houve cancelamento de verdade: CANCELADO e NAO voo-fantasma. E a coluna para qualquer taxa de cancelamento publicada. Usando esta em vez de voo_cancelado, a Iberia sai de 54,61 por cento para 6,46 por cento."
+  },
+  {
+    "coluna": "dia_atipico",
+    "comentario": "Regra R5. Verdadeiro quando a taxa nacional de cancelamento do dia passou de 3 vezes a mediana do periodo (2,72 por cento). Separa evento sistemico de desempenho da companhia: em 10/12/2025 foram cancelados 17,85 por cento dos voos."
+  },
+  {
+    "coluna": "suspeita_erro_horario",
+    "comentario": "Regra R4. Verdadeiro quando a velocidade media programada fica fora de 200-950 km/h, faixa que o projeto considera plausivel; sugere erro de horario ou de data na origem. 7.532 voos. Pega o que a faixa de atraso -2h a +24h deixa passar."
+  },
+  {
+    "coluna": "destino_opera_a_noite",
+    "comentario": "Falso quando o aeroporto de destino nao tem operacao noturna (130 aerodromos no cadastro da ANAC, 17 entre os aeroportos do VRA). A taxa de cancelamento dos voos para esses destinos e 22,36 por cento, contra 2,87 por cento geral; o dado nao informa o motivo."
+  },
+  {
+    "coluna": "registro_malha_internacional",
+    "comentario": "Verdadeiro quando o registro veio do sistema de malha internacional, identificado pela fracao de segundo no horario previsto do arquivo. E LINHAGEM, nao qualidade: a Turkish tem 98,8 por cento dos registros assim e cancela so 1,44 por cento. Nao use como filtro de confianca - use voo_fantasma."
+  },
+  {
+    "coluna": "_processado_em",
+    "comentario": "Auditoria: momento em que esta linha foi construida na camada gold."
+  }
+]
