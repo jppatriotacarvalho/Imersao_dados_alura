@@ -10,7 +10,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-voebem}   # senha local de desenvolvimento
     ports:
-      - "3307:3306"            # 3306 já é do MySQL instalado no Windows
+      - "127.0.0.1:3307:3306"  # só este computador conecta; 3306 já é do MySQL instalado no Windows
     volumes:
       # rodam em ordem alfabética, só na primeira vez que o banco nasce
       - ./sql/schema_mysql.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro

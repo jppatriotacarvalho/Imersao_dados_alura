@@ -89,8 +89,11 @@ docker compose down
 docker compose down -v
 ```
 
-MySQL no Workbench ou DBeaver: host `127.0.0.1`, porta `3307`, usuário `root`, senha `voebem`
-(é uma senha só de desenvolvimento, o banco só existe no seu computador).
+MySQL no Workbench ou DBeaver: host `127.0.0.1`, porta `3307`, usuário `root`, senha `voebem`.
+É uma senha padrão só de desenvolvimento: a porta fica presa ao `127.0.0.1`, então só o seu computador
+conecta no banco. Para usar outra senha, crie um arquivo `.env` na raiz do projeto com
+`MYSQL_ROOT_PASSWORD=sua_senha` antes da primeira subida (o `.env` é ignorado pelo Git). Se o banco já
+existir, rode `docker compose down -v` para ele ser criado de novo com a senha nova.
 
 > **Só quer ver o dashboard?** Ele lê `dados/painel.json`, não o MySQL. `docker compose up -d web`
 > sobe só o site, com uma imagem bem menor (a caixa de perguntas do agente fica indisponível).
