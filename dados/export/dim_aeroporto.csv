@@ -1,0 +1,397 @@
+icao_aeroporto,nome_aeroporto,municipio_aeroporto,praca_aeroporto,uf_aeroporto,latitude,longitude,altitude_m,operacao_noturna,opera_a_noite,pais_aeroporto,utc_offset,no_cadastro_anac
+SBCP,Bartolomeu Lisandro,CAMPOS DOS GOYTACAZES,Campos dos Goytacazes,Rio de Janeiro,-21.701111,-41.307778,18.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SSCE,AEROPORTO FORA DO CADASTRO ANAC (SSCE),,,,,,,,,Brasil,,false
+SPZO,AEROPORTO FORA DO CADASTRO ANAC (SPZO),,,,,,,,,Exterior,,false
+SBGO,Santa Genoveva,GOIÂNIA,Goiânia,Goiás,-16.6325,-49.221111,747.0,,,Brasil,-3,true
+SDSC,Mário Pereira Lopes,SÃO CARLOS,São Carlos,São Paulo,-21.876389,-47.903333,807.0,,,Brasil,-3,true
+SKCG,AEROPORTO FORA DO CADASTRO ANAC (SKCG),,,,,,,,,Exterior,,false
+SSBZ,AEROPORTO FORA DO CADASTRO ANAC (SSBZ),,,,,,,,,Brasil,,false
+SBCH,Serafin Enoss Bertaso,CHAPECÓ,Chapecó,Santa Catarina,-27.133889,-52.658889,654.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+LSZH,AEROPORTO FORA DO CADASTRO ANAC (LSZH),,,,,,,,,Exterior,,false
+SSUM,Orlando de Carvalho,UMUARAMA,Umuarama,Paraná,-23.799167,-53.313889,473.0,,,Brasil,-3,true
+SNGI,Aeródromo de Guanambi,GUANAMBI,Guanambi,Bahia,-14.208056,-42.746111,553.0,VFR,true,Brasil,-3,true
+SDCD,AEROPORTO FORA DO CADASTRO ANAC (SDCD),,,,,,,,,Brasil,,false
+KDFW,AEROPORTO FORA DO CADASTRO ANAC (KDFW),,,,,,,,,Exterior,,false
+SBAX,Romeu Zema,ARAXÁ,Araxá,Minas Gerais,-19.563056,-46.960556,998.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+MMGL,AEROPORTO FORA DO CADASTRO ANAC (MMGL),,,,,,,,,Exterior,,false
+SULS,AEROPORTO FORA DO CADASTRO ANAC (SULS),,,,,,,,,Exterior,,false
+SBJR,Jacarepaguá - Roberto Marinho,RIO DE JANEIRO,Rio de Janeiro,Rio de Janeiro,-22.9875,-43.37,3.0,,,Brasil,-3,true
+SBRB,Plácido de Castro,RIO BRANCO,Rio Branco,Acre,-9.8683333,-67.898056,193.0,VFR / IFR - CAT I,true,Brasil,-5,true
+SSUV,José Cleto,UNIÃO DA VITÓRIA,União da Vitória,Paraná,-26.231944,-51.0675,750.0,Sem Operação,false,Brasil,-3,true
+KIAH,AEROPORTO FORA DO CADASTRO ANAC (KIAH),,,,,,,,,Exterior,,false
+DXXX,AEROPORTO FORA DO CADASTRO ANAC (DXXX),,,,,,,,,Exterior,,false
+SBKG,Presidente João Suassuna,CAMPINA GRANDE,Campina Grande,Paraíba,-7.2691667,-35.895,502.0,,,Brasil,-3,true
+SNSM,Salinópolis,SALINÓPOLIS,Salinópolis,Pará,-0.69638889,-47.336667,36.0,Sem Operação,false,Brasil,-3,true
+KMEM,AEROPORTO FORA DO CADASTRO ANAC (KMEM),,,,,,,,,Exterior,,false
+SAAR,AEROPORTO FORA DO CADASTRO ANAC (SAAR),,,,,,,,,Exterior,,false
+SNLN,Municipal de Linhares,LINHARES,Linhares,Espírito Santo,-19.355278,-40.071389,42.0,,,Brasil,-3,true
+SARE,AEROPORTO FORA DO CADASTRO ANAC (SARE),,,,,,,,,Exterior,,false
+SBMK,Mário Ribeiro,MONTES CLAROS,Montes Claros,Minas Gerais,-16.706111,-43.821944,668.0,,,Brasil,-3,true
+SBOI,Oiapoque,OIAPOQUE,Oiapoque,Amapá,3.85416667,-51.797222,16.0,,,Brasil,-3,true
+SBAC,Aeroporto Regional de Canoa Quebrada Dragão do Mar,ARACATI,Aracati,Ceará,-4.5686111,-37.804722,36.0,,,Brasil,-3,true
+LPFR,AEROPORTO FORA DO CADASTRO ANAC (LPFR),,,,,,,,,Exterior,,false
+SBCB,Cabo Frio,CABO FRIO,Cabo Frio,Rio de Janeiro,-22.920833,-42.071389,7.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+DNMM,AEROPORTO FORA DO CADASTRO ANAC (DNMM),,,,,,,,,Exterior,,false
+CYMX,AEROPORTO FORA DO CADASTRO ANAC (CYMX),,,,,,,,,Exterior,,false
+SBCX,Hugo Cantergiani,CAXIAS DO SUL,Caxias do Sul,Rio Grande do Sul,-29.198056,-51.186667,754.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+UBBB,AEROPORTO FORA DO CADASTRO ANAC (UBBB),,,,,,,,,Exterior,,false
+SBPJ,Brigadeiro Lysias Rodrigues,PALMAS,Palmas,Tocantins,-10.29,-48.357778,236.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SBCZ,Cruzeiro do Sul,CRUZEIRO DO SUL,Cruzeiro do Sul,Acre,-7.5994444,-72.769444,194.0,VFR / IFR Não Precisão,true,Brasil,-5,true
+SBMA,João Corrêa da Rocha,MARABÁ,Marabá,Pará,-5.3680556,-49.138056,109.0,,,Brasil,-3,true
+EDDM,AEROPORTO FORA DO CADASTRO ANAC (EDDM),,,,,,,,,Exterior,,false
+SEGU,AEROPORTO FORA DO CADASTRO ANAC (SEGU),,,,,,,,,Exterior,,false
+SBIZ,Prefeito Renato Moreira,,Imperatriz,Maranhão,-5.5305556,-47.458333,132.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SVVA,AEROPORTO FORA DO CADASTRO ANAC (SVVA),,,,,,,,,Exterior,,false
+TFFF,AEROPORTO FORA DO CADASTRO ANAC (TFFF),,,,,,,,,Exterior,,false
+SBPB,Prefeito Doutor João Silva Filho,PARNAÍBA,Parnaíba,Piauí,-2.8933333,-41.730278,7.0,VFR,true,Brasil,-3,true
+SBJU,Orlando Bezerra de Menezes,JUAZEIRO DO NORTE,Juazeiro do Norte,Ceará,-7.2191667,-39.269444,409.0,,,Brasil,-3,true
+SSKW,Cacoal,CACOAL,Cacoal,Rondônia,-11.495556,-61.450833,249.0,,,Brasil,-4,true
+SAZS,AEROPORTO FORA DO CADASTRO ANAC (SAZS),,,,,,,,,Exterior,,false
+SBMG,Sílvio Name Júnior,MARINGÁ,Maringá,Paraná,-23.476389,-52.017778,549.0,,,Brasil,-3,true
+EGFF,AEROPORTO FORA DO CADASTRO ANAC (EGFF),,,,,,,,,Exterior,,false
+LMML,AEROPORTO FORA DO CADASTRO ANAC (LMML),,,,,,,,,Exterior,,false
+SBNM,Santo Ângelo,SANTO ÂNGELO,Santo Ângelo,Rio Grande do Sul,-28.281667,-54.168333,322.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SBFZ,Pinto Martins,FORTALEZA,Fortaleza,Ceará,-3.7758333,-38.532222,25.0,,,Brasil,-3,true
+SEQM,AEROPORTO FORA DO CADASTRO ANAC (SEQM),,,,,,,,,Exterior,,false
+SWYN,Apuí,APUÍ,Apuí,Amazonas,-7.1722222,-59.838889,60.0,,,Brasil,-4,true
+FKYS,AEROPORTO FORA DO CADASTRO ANAC (FKYS),,,,,,,,,Exterior,,false
+SBUG,Rubem Berta,URUGUAIANA,Uruguaiana,Rio Grande do Sul,-29.783333,-57.036944,78.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SNRU,Caruaru,CARUARU,Caruaru,Pernambuco,-8.2844444,-36.010833,576.0,Sem Operação,false,Brasil,-3,true
+SKBG,AEROPORTO FORA DO CADASTRO ANAC (SKBG),,,,,,,,,Exterior,,false
+SBJV,Lauro Carneiro de Loyola,JOINVILLE,Joinville,Santa Catarina,-26.223056,-48.797778,5.0,VFR / IFR - CAT I,true,Brasil,-3,true
+TTPP,AEROPORTO FORA DO CADASTRO ANAC (TTPP),,,,,,,,,Exterior,,false
+GVAC,AEROPORTO FORA DO CADASTRO ANAC (GVAC),,,,,,,,,Exterior,,false
+SBIP,Usiminas,SANTANA DO PARAÍSO,Santana do Paraíso,Minas Gerais,-19.470556,-42.488056,240.0,,,Brasil,-3,true
+KLAX,AEROPORTO FORA DO CADASTRO ANAC (KLAX),,,,,,,,,Exterior,,false
+GCRR,AEROPORTO FORA DO CADASTRO ANAC (GCRR),,,,,,,,,Exterior,,false
+SBCA,Aeroporto Regional do Oeste - Cel. Adalberto Mendes da Silva - Cascavel - Paraná,CASCAVEL,Cascavel,Paraná,-25.002222,-53.501944,759.0,,,Brasil,-3,true
+FNLU,AEROPORTO FORA DO CADASTRO ANAC (FNLU),,,,,,,,,Exterior,,false
+LEZG,AEROPORTO FORA DO CADASTRO ANAC (LEZG),,,,,,,,,Exterior,,false
+LFLX,AEROPORTO FORA DO CADASTRO ANAC (LFLX),,,,,,,,,Exterior,,false
+KFLL,AEROPORTO FORA DO CADASTRO ANAC (KFLL),,,,,,,,,Exterior,,false
+SBFL,Hercílio Luz,FLORIANÓPOLIS,Florianópolis,Santa Catarina,-27.670278,-48.5525,5.0,VFR / IFR - CAT I,true,Brasil,-3,true
+SANT,AEROPORTO FORA DO CADASTRO ANAC (SANT),,,,,,,,,Exterior,,false
+SBCF,Tancredo Neves,CONFINS,Confins,Minas Gerais,-19.624444,-43.971944,829.0,,,Brasil,-3,true
+SBFI,Cataratas,FOZ DO IGUAÇU,Foz do Iguaçu,Paraná,-25.600278,-54.485,240.0,,,Brasil,-3,true
+SNCL,AEROPORTO FORA DO CADASTRO ANAC (SNCL),,,,,,,,,Brasil,,false
+MDPC,AEROPORTO FORA DO CADASTRO ANAC (MDPC),,,,,,,,,Exterior,,false
+MMMY,AEROPORTO FORA DO CADASTRO ANAC (MMMY),,,,,,,,,Exterior,,false
+ELLX,AEROPORTO FORA DO CADASTRO ANAC (ELLX),,,,,,,,,Exterior,,false
+EHBK,AEROPORTO FORA DO CADASTRO ANAC (EHBK),,,,,,,,,Exterior,,false
+DIAP,AEROPORTO FORA DO CADASTRO ANAC (DIAP),,,,,,,,,Exterior,,false
+RKSI,AEROPORTO FORA DO CADASTRO ANAC (RKSI),,,,,,,,,Exterior,,false
+SBBE,INTERNACIONAL DE BELÉM/VAL DE CANS/JÚLIO CEZAR RIBEIRO,BELÉM,Belém,Pará,-1.3847222,-48.478889,17.0,,,Brasil,-3,true
+SBVH,Vilhena,VILHENA,Vilhena,Rondônia,-12.694444,-60.098333,615.0,VFR / IFR Não Precisão,true,Brasil,-4,true
+SIFC,AEROPORTO FORA DO CADASTRO ANAC (SIFC),,,,,,,,,Brasil,,false
+SWBR,Borba,BORBA,Borba,Amazonas,-4.4061111,-59.6025,30.0,Sem Operação,false,Brasil,-4,true
+KAEX,AEROPORTO FORA DO CADASTRO ANAC (KAEX),,,,,,,,,Exterior,,false
+CYHM,AEROPORTO FORA DO CADASTRO ANAC (CYHM),,,,,,,,,Exterior,,false
+SBIL,Bahia - Jorge Amado,ILHÉUS,Ilhéus,Bahia,-14.815,-39.033333,4.0,VFR,true,Brasil,-3,true
+SBPV,Governador Jorge Teixeira de Oliveira,PORTO VELHO,Porto Velho,Rondônia,-8.7136111,-63.902778,90.0,,,Brasil,-4,true
+LIRF,AEROPORTO FORA DO CADASTRO ANAC (LIRF),,,,,,,,,Exterior,,false
+KSEA,AEROPORTO FORA DO CADASTRO ANAC (KSEA),,,,,,,,,Exterior,,false
+MSLP,AEROPORTO FORA DO CADASTRO ANAC (MSLP),,,,,,,,,Exterior,,false
+SBBR,Presidente Juscelino Kubitschek,BRASÍLIA,Brasília,Distrito Federal,-15.871111,-47.918611,1066.0,VFR / IFR - CAT I,true,Brasil,-3,true
+MTCH,AEROPORTO FORA DO CADASTRO ANAC (MTCH),,,,,,,,,Exterior,,false
+LFPG,AEROPORTO FORA DO CADASTRO ANAC (LFPG),,,,,,,,,Exterior,,false
+SBNF,Ministro Victor Konder,NAVEGANTES,Navegantes,Santa Catarina,-26.878611,-48.650833,5.0,,,Brasil,-3,true
+FACT,AEROPORTO FORA DO CADASTRO ANAC (FACT),,,,,,,,,Exterior,,false
+SWBC,Barcelos,BARCELOS,Barcelos,Amazonas,-0.98111111,-62.919444,34.0,Sem Operação,false,Brasil,-4,true
+SNGN,Garanhuns,GARANHUNS,Garanhuns,Pernambuco,-8.8344444,-36.471389,759.0,,,Brasil,-3,true
+SBMT,Campo de Marte,SÃO PAULO,São Paulo,São Paulo,-23.509167,-46.6375,723.0,VFR,true,Brasil,-3,true
+SBCG,Aeroporto Internacional de Campo Grande - Ueze Elias Zahran,CAMPO GRANDE,Campo Grande,Mato Grosso do Sul,-20.469444,-54.670278,559.0,,,Brasil,-4,true
+SBTC,UNA/COMANDATUBA,UNA,Una,Bahia,-15.353333,-38.997222,7.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SUMU,AEROPORTO FORA DO CADASTRO ANAC (SUMU),,,,,,,,,Exterior,,false
+SSGY,Guaíra,GUAÍRA,Guaíra,Paraná,-24.079722,-54.188056,271.0,,,Brasil,-3,true
+KCWF,AEROPORTO FORA DO CADASTRO ANAC (KCWF),,,,,,,,,Exterior,,false
+SNZR,Pedro Rabelo de Souza,PARACATU,Paracatu,Minas Gerais,-17.242778,-46.883056,730.0,Sem Operação,false,Brasil,-3,true
+SBKP,Viracopos,CAMPINAS,Campinas,São Paulo,-23.006944,-47.134444,661.0,,,Brasil,-3,true
+SBBP,Estadual Arthur Siqueira,BRAGANÇA PAULISTA,Bragança Paulista,São Paulo,-22.978889,-46.537222,893.0,VFR,true,Brasil,-3,true
+SBVT,Eurico de Aguiar Salles,VITÓRIA,Vitória,Espírito Santo,-20.258056,-40.286389,3.0,VFR / IFR - CAT I,true,Brasil,-3,true
+SNCP,Aeroporto Ricardo Sell Wagner - Regional da Serra Catarinense,CORREIA PINTO,Correia Pinto,Santa Catarina,-27.634167,-50.358333,880.0,,,Brasil,-3,true
+VTBS,AEROPORTO FORA DO CADASTRO ANAC (VTBS),,,,,,,,,Exterior,,false
+MROC,AEROPORTO FORA DO CADASTRO ANAC (MROC),,,,,,,,,Exterior,,false
+SWPI,Parintins,PARINTINS,Parintins,Amazonas,-2.6736111,-56.7775,25.0,VFR,true,Brasil,-4,true
+SSOU,AEROPORTO FORA DO CADASTRO ANAC (SSOU),,,,,,,,,Brasil,,false
+SBSR,Professor Eribelto Manoel Reino,SÃO JOSÉ DO RIO PRETO,São José do Rio Preto,São Paulo,-20.817222,-49.406944,544.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SBPS,Porto Seguro,PORTO SEGURO,Porto Seguro,Bahia,-16.438056,-39.077778,51.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SNBA,Chafei Amsei,BARRETOS,Barretos,São Paulo,-20.585556,-48.595833,580.0,VFR,true,Brasil,-3,true
+SLCB,AEROPORTO FORA DO CADASTRO ANAC (SLCB),,,,,,,,,Exterior,,false
+LFSB,AEROPORTO FORA DO CADASTRO ANAC (LFSB),,,,,,,,,Exterior,,false
+SBRJ,Santos Dumont,RIO DE JANEIRO,Rio de Janeiro,Rio de Janeiro,-22.91,-43.1625,3.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SNTO,Juscelino Kubitscheck,TEÓFILO OTONI,Teófilo Otoni,Minas Gerais,-17.890833,-41.515,480.0,VFR,true,Brasil,-3,true
+LIMC,AEROPORTO FORA DO CADASTRO ANAC (LIMC),,,,,,,,,Exterior,,false
+SBCJ,Carajás,PARAUAPEBAS,Parauapebas,Pará,-6.1177778,-50.003333,629.0,VFR / IFR - CAT I,true,Brasil,-3,true
+SBSV,DEPUTADO LUÍS EDUARDO MAGALHÃES,SALVADOR,Salvador,Bahia,-12.908611,-38.3225,20.0,,,Brasil,-3,true
+SBAT,PILOTO OSVALDO MARQUES DIAS,ALTA FLORESTA,Alta Floresta,Mato Grosso,-9.8663889,-56.105,289.0,,,Brasil,-4,true
+SNPD,Patos de Minas,PATOS DE MINAS,Patos de Minas,Minas Gerais,-18.672222,-46.491389,851.0,,,Brasil,-3,true
+EDDF,AEROPORTO FORA DO CADASTRO ANAC (EDDF),,,,,,,,,Exterior,,false
+SBTB,Trombetas,ORIXIMINÁ,Oriximiná,Pará,-1.4897222,-56.396944,51.0,,,Brasil,-3,true
+SDTF,Tatuí,TATUÍ,Tatuí,São Paulo,-23.331944,-47.88,635.0,Sem Operação,false,Brasil,-3,true
+LFPO,AEROPORTO FORA DO CADASTRO ANAC (LFPO),,,,,,,,,Exterior,,false
+SKCL,AEROPORTO FORA DO CADASTRO ANAC (SKCL),,,,,,,,,Exterior,,false
+SBPF,Lauro Kurtz,PASSO FUNDO,Passo Fundo,Rio Grande do Sul,-28.244167,-52.328333,725.0,,,Brasil,-3,true
+TJSJ,AEROPORTO FORA DO CADASTRO ANAC (TJSJ),,,,,,,,,Exterior,,false
+KMIA,AEROPORTO FORA DO CADASTRO ANAC (KMIA),,,,,,,,,Exterior,,false
+SVMG,AEROPORTO FORA DO CADASTRO ANAC (SVMG),,,,,,,,,Exterior,,false
+SBHT,Altamira,ALTAMIRA,Altamira,Pará,-3.2508333,-52.252222,112.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+LECN,AEROPORTO FORA DO CADASTRO ANAC (LECN),,,,,,,,,Exterior,,false
+SOCA,AEROPORTO FORA DO CADASTRO ANAC (SOCA),,,,,,,,,Exterior,,false
+KORD,AEROPORTO FORA DO CADASTRO ANAC (KORD),,,,,,,,,Exterior,,false
+EGPK,AEROPORTO FORA DO CADASTRO ANAC (EGPK),,,,,,,,,Exterior,,false
+SBCR,Corumbá,,Corumbá,Mato Grosso do Sul,-19.011944,-57.671389,141.0,VFR / IFR Não Precisão,true,Brasil,-4,true
+VHHH,AEROPORTO FORA DO CADASTRO ANAC (VHHH),,,,,,,,,Exterior,,false
+SNSS,Salinas,SALINAS,Salinas,Minas Gerais,-16.208333,-42.321944,763.0,Sem Operação,false,Brasil,-3,true
+SPSO,AEROPORTO FORA DO CADASTRO ANAC (SPSO),,,,,,,,,Exterior,,false
+SPQU,AEROPORTO FORA DO CADASTRO ANAC (SPQU),,,,,,,,,Exterior,,false
+FZAA,AEROPORTO FORA DO CADASTRO ANAC (FZAA),,,,,,,,,Exterior,,false
+SDBB,Bebedouro,BEBEDOURO,Bebedouro,São Paulo,-20.900278,-48.473611,592.0,,,Brasil,-3,true
+SNMZ,Porto de Moz,PORTO DE MOZ,Porto de Moz,Pará,-1.7413889,-52.235833,16.0,,,Brasil,-3,true
+SPQT,AEROPORTO FORA DO CADASTRO ANAC (SPQT),,,,,,,,,Exterior,,false
+SBTE,SENADOR PETRÔNIO PORTELLA,TERESINA,Teresina,Piauí,-5.0605556,-42.824444,67.0,,,Brasil,-3,true
+SBCN,Nelson Rodrigues Guimarães,CALDAS NOVAS,Caldas Novas,Goiás,-17.725,-48.606389,703.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SBMO,Zumbi dos Palmares,MACEIÓ,Maceió,Alagoas,-9.5108333,-35.791667,118.0,,,Brasil,-3,true
+SAME,AEROPORTO FORA DO CADASTRO ANAC (SAME),,,,,,,,,Exterior,,false
+SBFN,Fernando de Noronha,FERNANDO DE NORONHA,Fernando de Noronha,Pernambuco,-3.8547222,-32.428333,58.0,,,Brasil,-2,true
+SBLE,HORÁCIO DE MATTOS,LENÇÓIS,Lençóis,Bahia,-12.482222,-41.276944,506.0,VFR,true,Brasil,-3,true
+SBSN,Maestro Wilson Fonseca,SANTARÉM,Santarém,Pará,-2.4247222,-54.785833,60.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SKBQ,AEROPORTO FORA DO CADASTRO ANAC (SKBQ),,,,,,,,,Exterior,,false
+SBDN,Presidente Prudente,PRESIDENTE PRUDENTE,Presidente Prudente,São Paulo,-22.175,-51.424444,452.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SLVR,AEROPORTO FORA DO CADASTRO ANAC (SLVR),,,,,,,,,Exterior,,false
+HUEN,AEROPORTO FORA DO CADASTRO ANAC (HUEN),,,,,,,,,Exterior,,false
+SBMY,Manicoré,MANICORÉ,Manicoré,Amazonas,-5.8111111,-61.278333,53.0,,,Brasil,-4,true
+LPPR,AEROPORTO FORA DO CADASTRO ANAC (LPPR),,,,,,,,,Exterior,,false
+SBUY,AEROPORTO FORA DO CADASTRO ANAC (SBUY),,,,,,,,,Brasil,,false
+MMMD,AEROPORTO FORA DO CADASTRO ANAC (MMMD),,,,,,,,,Exterior,,false
+SBJP,Presidente Castro Pinto,BAYEUX,João Pessoa,Paraíba,-7.1483333,-34.950278,66.0,,,Brasil,-3,true
+KJFK,AEROPORTO FORA DO CADASTRO ANAC (KJFK),,,,,,,,,Exterior,,false
+SNDV,Brigadeiro Antônio Cabral,DIVINÓPOLIS,Divinópolis,Minas Gerais,-20.181944,-44.87,795.0,,,Brasil,-3,true
+TNCA,AEROPORTO FORA DO CADASTRO ANAC (TNCA),,,,,,,,,Exterior,,false
+SSBK,AEROPORTO FORA DO CADASTRO ANAC (SSBK),,,,,,,,,Brasil,,false
+KCVG,AEROPORTO FORA DO CADASTRO ANAC (KCVG),,,,,,,,,Exterior,,false
+OMDB,AEROPORTO FORA DO CADASTRO ANAC (OMDB),,,,,,,,,Exterior,,false
+SMJP,AEROPORTO FORA DO CADASTRO ANAC (SMJP),,,,,,,,,Exterior,,false
+SCEL,AEROPORTO FORA DO CADASTRO ANAC (SCEL),,,,,,,,,Exterior,,false
+KIAD,AEROPORTO FORA DO CADASTRO ANAC (KIAD),,,,,,,,,Exterior,,false
+SNVS,Breves,BREVES,Breves,Pará,-1.6363889,-50.443333,30.0,,,Brasil,-3,true
+TBPB,AEROPORTO FORA DO CADASTRO ANAC (TBPB),,,,,,,,,Exterior,,false
+KBFI,AEROPORTO FORA DO CADASTRO ANAC (KBFI),,,,,,,,,Exterior,,false
+MPTO,AEROPORTO FORA DO CADASTRO ANAC (MPTO),,,,,,,,,Exterior,,false
+SBCY,Marechal Rondon,CUIABÁ,Cuiabá,Mato Grosso,-15.65,-56.1175,188.0,,,Brasil,-4,true
+SBBV,Atlas Brasil Cantanhede,BOA VISTA,Boa Vista,Roraima,2.84138889,-60.692222,84.0,VFR / IFR Não Precisão,true,Brasil,-4,true
+SNJM,Regional de Santo Amaro de Minas,MANHUAÇU,Manhuaçu,Minas Gerais,-20.259722,-42.183889,829.0,,,Brasil,-3,true
+LEBL,AEROPORTO FORA DO CADASTRO ANAC (LEBL),,,,,,,,,Exterior,,false
+SDAG,Angra Dos Reis,ANGRA DOS REIS,Angra dos Reis,Rio de Janeiro,-22.975278,-44.307222,3.0,,,Brasil,-3,true
+SD12,AEROPORTO FORA DO CADASTRO ANAC (SD12),,,,,,,,,Brasil,,false
+KATL,AEROPORTO FORA DO CADASTRO ANAC (KATL),,,,,,,,,Exterior,,false
+CYYZ,AEROPORTO FORA DO CADASTRO ANAC (CYYZ),,,,,,,,,Exterior,,false
+KEWR,AEROPORTO FORA DO CADASTRO ANAC (KEWR),,,,,,,,,Exterior,,false
+SBRF,AEROPORTO INTERNACIONAL RECIFE/GUARARAPES - GILBERTO FREYRE,RECIFE,Recife,Pernambuco,-8.1263889,-34.922778,10.0,,,Brasil,-3,true
+SKPE,AEROPORTO FORA DO CADASTRO ANAC (SKPE),,,,,,,,,Exterior,,false
+KAUS,AEROPORTO FORA DO CADASTRO ANAC (KAUS),,,,,,,,,Exterior,,false
+SYCJ,AEROPORTO FORA DO CADASTRO ANAC (SYCJ),,,,,,,,,Exterior,,false
+SARP,AEROPORTO FORA DO CADASTRO ANAC (SARP),,,,,,,,,Exterior,,false
+SBGP,AEROPORTO FORA DO CADASTRO ANAC (SBGP),,,,,,,,,Brasil,,false
+MDSD,AEROPORTO FORA DO CADASTRO ANAC (MDSD),,,,,,,,,Exterior,,false
+EBBR,AEROPORTO FORA DO CADASTRO ANAC (EBBR),,,,,,,,,Exterior,,false
+SBDB,Aeródromo Público de Bonito,BONITO,Bonito,Mato Grosso do Sul,-21.247222,-56.4525,334.0,,,Brasil,-4,true
+VOHY,AEROPORTO FORA DO CADASTRO ANAC (VOHY),,,,,,,,,Exterior,,false
+SBPA,Salgado Filho,PORTO ALEGRE,Porto Alegre,Rio Grande do Sul,-29.994722,-51.171111,9.0,,,Brasil,-3,true
+SWMW,Maués,MAUÉS,Maués,Amazonas,-3.3719444,-57.724722,21.0,Sem Operação,false,Brasil,-4,true
+SBVC,Glauber de Andrade Rocha,VITÓRIA DA CONQUISTA,Vitória da Conquista,Bahia,-14.907778,-40.914722,894.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+FBSK,AEROPORTO FORA DO CADASTRO ANAC (FBSK),,,,,,,,,Exterior,,false
+SNEB,Nagib Demachki,PARAGOMINAS,Paragominas,Pará,-3.0197222,-47.316389,135.0,Sem Operação,false,Brasil,-3,true
+KMCI,AEROPORTO FORA DO CADASTRO ANAC (KMCI),,,,,,,,,Exterior,,false
+SBLO,Governador José Richa,LONDRINA,Londrina,Paraná,-23.330278,-51.136667,569.0,,,Brasil,-3,true
+SSBV,AEROPORTO FORA DO CADASTRO ANAC (SSBV),,,,,,,,,Brasil,,false
+SNDT,JUSCELINO KUBITSCHEK,DIAMANTINA,Diamantina,Minas Gerais,-18.232222,-43.650278,1356.0,,,Brasil,-3,true
+SBTF,Prefeito Orlando Marinho,TEFÉ,Tefé,Amazonas,-3.3802778,-64.725278,57.0,VFR / IFR Não Precisão,true,Brasil,-4,true
+SGAS,AEROPORTO FORA DO CADASTRO ANAC (SGAS),,,,,,,,,Exterior,,false
+GOBD,AEROPORTO FORA DO CADASTRO ANAC (GOBD),,,,,,,,,Exterior,,false
+SBAU,Araçatuba,ARAÇATUBA,Araçatuba,São Paulo,-21.144167,-50.426389,415.0,,,Brasil,-3,true
+SNTS,BRIGADEIRO FIRMINO AYRES,PATOS,Patos,Paraíba,-7.0377778,-37.2575,265.0,,,Brasil,-3,true
+SKRG,AEROPORTO FORA DO CADASTRO ANAC (SKRG),,,,,,,,,Exterior,,false
+SBGV,Coronel Altino Machado,GOVERNADOR VALADARES,Governador Valadares,Minas Gerais,-18.896111,-41.983333,171.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SKBO,AEROPORTO FORA DO CADASTRO ANAC (SKBO),,,,,,,,,Exterior,,false
+EHAM,AEROPORTO FORA DO CADASTRO ANAC (EHAM),,,,,,,,,Exterior,,false
+SBMS,Dix-Sept Rosado,MOSSORÓ,Mossoró,Rio Grande do Norte,-5.1958333,-37.361667,23.0,,,Brasil,-3,true
+SDCO,Sorocaba,SOROCABA,Sorocaba,São Paulo,-23.477778,-47.49,635.0,,,Brasil,-3,true
+SNBC,Barra do Corda,BARRA DO CORDA,Barra do Corda,Maranhão,-5.5025,-45.216111,160.0,Sem Operação,false,Brasil,-3,true
+SBSL,MARECHAL CUNHA MACHADO,SÃO LUÍS,São Luís,Maranhão,-2.5869444,-44.236111,54.0,,,Brasil,-3,true
+SSGG,Aeroporto Regional de Guarapuava - Tancredo Thomás de Faria,GUARAPUAVA,Guarapuava,Paraná,-25.388333,-51.523611,1065.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SJZA,Pedro Vieira Moreira,CAJAZEIRAS,Cajazeiras,Paraíba,-6.8827778,-38.615833,335.0,,,Brasil,-3,true
+SAEZ,AEROPORTO FORA DO CADASTRO ANAC (SAEZ),,,,,,,,,Exterior,,false
+SBSJ,Professor Urbano Ernesto Stumpf,SÃO JOSÉ DOS CAMPOS,São José dos Campos,São Paulo,-23.228889,-45.871111,647.0,VFR / IFR - CAT I,true,Brasil,-3,true
+SBSG,Aeroporto Internacional do Rio Grande do Norte / São Gonçalo do Amarante - Governador Aluizio Alves,SÃO GONÇALO DO AMARANTE,Natal,Rio Grande do Norte,-5.7688889,-35.366389,83.0,,,Brasil,-3,true
+SBJI,Ji-Paraná,JI-PARANÁ,Ji-Paraná,Rondônia,-10.870556,-61.846667,182.0,,,Brasil,-4,true
+HECA,AEROPORTO FORA DO CADASTRO ANAC (HECA),,,,,,,,,Exterior,,false
+TNCC,AEROPORTO FORA DO CADASTRO ANAC (TNCC),,,,,,,,,Exterior,,false
+SIMK,Tenente Lund Pressoto,FRANCA,Franca,São Paulo,-20.590278,-47.3825,1003.0,VFR,true,Brasil,-3,true
+SWGN,Araguaína,ARAGUAÍNA,Araguaína,Tocantins,-7.2283333,-48.240833,236.0,VFR,true,Brasil,-3,true
+OMAA,AEROPORTO FORA DO CADASTRO ANAC (OMAA),,,,,,,,,Exterior,,false
+SLAL,AEROPORTO FORA DO CADASTRO ANAC (SLAL),,,,,,,,,Exterior,,false
+SASA,AEROPORTO FORA DO CADASTRO ANAC (SASA),,,,,,,,,Exterior,,false
+KTPA,AEROPORTO FORA DO CADASTRO ANAC (KTPA),,,,,,,,,Exterior,,false
+MKJP,AEROPORTO FORA DO CADASTRO ANAC (MKJP),,,,,,,,,Exterior,,false
+KMCO,AEROPORTO FORA DO CADASTRO ANAC (KMCO),,,,,,,,,Exterior,,false
+SNHS,Santa Magalhães,SERRA TALHADA,Serra Talhada,Pernambuco,-8.0613889,-38.328611,470.0,,,Brasil,-3,true
+SBPK,Aeroporto Internacional de Pelotas/RS - João Simões Lopes Neto,PELOTAS,Pelotas,Rio Grande do Sul,-31.716111,-52.331111,18.0,,,Brasil,-3,true
+SBUR,Mario de Almeida Franco,UBERABA,Uberaba,Minas Gerais,-19.764722,-47.966111,809.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SPJC,AEROPORTO FORA DO CADASTRO ANAC (SPJC),,,,,,,,,Exterior,,false
+EBLG,AEROPORTO FORA DO CADASTRO ANAC (EBLG),,,,,,,,,Exterior,,false
+SBSM,Santa Maria,SANTA MARIA,Santa Maria,Rio Grande do Sul,-29.710833,-53.692222,88.0,,,Brasil,-3,true
+SBGL,RIO DE JANEIRO/GALEÃO - ANTÔNIO CARLOS JOBIM,RIO DE JANEIRO,Rio de Janeiro,Rio de Janeiro,-22.81,-43.250556,9.0,,,Brasil,-3,true
+SBMQ,Alberto Alcolumbre,MACAPÁ,Macapá,Amapá,0.050555556,-51.072222,17.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SBPO,AEROPORTO REGIONAL DE PATO BRANCO - PROFESSOR JUVENAL LOUREIRO CARDOSO,PATO BRANCO,Pato Branco,Paraná,-26.217222,-52.694444,823.0,,,Brasil,-3,true
+MMSM,AEROPORTO FORA DO CADASTRO ANAC (MMSM),,,,,,,,,Exterior,,false
+CYUL,AEROPORTO FORA DO CADASTRO ANAC (CYUL),,,,,,,,,Exterior,,false
+GMMN,AEROPORTO FORA DO CADASTRO ANAC (GMMN),,,,,,,,,Exterior,,false
+SBSP,São Paulo/Congonhas - Deputado Freitas Nobre,SÃO PAULO,São Paulo,São Paulo,-23.626111,-46.656389,802.0,VFR / IFR - CAT I,true,Brasil,-3,true
+OTHH,AEROPORTO FORA DO CADASTRO ANAC (OTHH),,,,,,,,,Exterior,,false
+SBTU,Tucuruí,TUCURUÍ,Tucuruí,Pará,-3.7769444,-49.719722,253.0,,,Brasil,-3,true
+OMDW,AEROPORTO FORA DO CADASTRO ANAC (OMDW),,,,,,,,,Exterior,,false
+SABE,AEROPORTO FORA DO CADASTRO ANAC (SABE),,,,,,,,,Exterior,,false
+FSIA,AEROPORTO FORA DO CADASTRO ANAC (FSIA),,,,,,,,,Exterior,,false
+SBAR,Santa Maria,ARACAJU,Aracaju,Sergipe,-10.985278,-37.073333,7.0,,,Brasil,-3,true
+SBJE,Comandante Ariston Pessoa,CRUZ,Cruz,Ceará,-2.9066667,-40.358056,27.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SBIH,Itaituba,ITAITUBA,Itaituba,Pará,-4.2422222,-56.000833,33.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+LTFM,AEROPORTO FORA DO CADASTRO ANAC (LTFM),,,,,,,,,Exterior,,false
+SBTT,Tabatinga,TABATINGA,Tabatinga,Amazonas,-4.2505556,-69.937778,80.0,,,Brasil,-5,true
+SBPP,Ponta Porã,PONTA PORÃ,Ponta Porã,Mato Grosso do Sul,-22.549722,-55.703056,657.0,,,Brasil,-4,true
+SNYA,Aeródromo Público de Almeirim,ALMEIRIM,Almeirim,Pará,-1.4791667,-52.578056,178.0,,,Brasil,-3,true
+SBSI,Presidente João Batista Figueiredo,SINOP,Sinop,Mato Grosso,-11.885,-55.586111,374.0,,,Brasil,-4,true
+SBUA,São Gabriel da Cachoeira,SÃO GABRIEL DA CACHOEIRA,São Gabriel da Cachoeira,Amazonas,-0.14805556,-66.985833,76.0,Sem Operação,false,Brasil,-4,true
+FNBJ,AEROPORTO FORA DO CADASTRO ANAC (FNBJ),,,,,,,,,Exterior,,false
+GMMX,AEROPORTO FORA DO CADASTRO ANAC (GMMX),,,,,,,,,Exterior,,false
+HEGN,AEROPORTO FORA DO CADASTRO ANAC (HEGN),,,,,,,,,Exterior,,false
+SWCA,Carauari,CARAUARI,Carauari,Amazonas,-4.8713889,-66.8975,108.0,Sem Operação,false,Brasil,-4,true
+KLCK,AEROPORTO FORA DO CADASTRO ANAC (KLCK),,,,,,,,,Exterior,,false
+DGAA,AEROPORTO FORA DO CADASTRO ANAC (DGAA),,,,,,,,,Exterior,,false
+SKGO,AEROPORTO FORA DO CADASTRO ANAC (SKGO),,,,,,,,,Exterior,,false
+SBAE,Bauru/Arealva,BAURU,Bauru,São Paulo,-22.157778,-49.068333,598.0,,,Brasil,-3,true
+KBFM,AEROPORTO FORA DO CADASTRO ANAC (KBFM),,,,,,,,,Exterior,,false
+FAOR,AEROPORTO FORA DO CADASTRO ANAC (FAOR),,,,,,,,,Exterior,,false
+SVMI,AEROPORTO FORA DO CADASTRO ANAC (SVMI),,,,,,,,,Exterior,,false
+SBVG,Major Brigadeiro Trompowsky,VARGINHA,Varginha,Minas Gerais,-21.588889,-45.473333,922.0,IFR Não Precisão,true,Brasil,-3,true
+GCTS,AEROPORTO FORA DO CADASTRO ANAC (GCTS),,,,,,,,,Exterior,,false
+KSLC,AEROPORTO FORA DO CADASTRO ANAC (KSLC),,,,,,,,,Exterior,,false
+SSVL,Telêmaco Borba,TELÊMACO BORBA,Telêmaco Borba,Paraná,-24.316389,-50.652222,796.0,Sem Operação,false,Brasil,-3,true
+GCLP,AEROPORTO FORA DO CADASTRO ANAC (GCLP),,,,,,,,,Exterior,,false
+GVPR,AEROPORTO FORA DO CADASTRO ANAC (GVPR),,,,,,,,,Exterior,,false
+SNBR,Dom Ricardo Weberberger,BARREIRAS,Barreiras,Bahia,-12.079167,-45.009444,747.0,,,Brasil,-3,true
+ZBAA,AEROPORTO FORA DO CADASTRO ANAC (ZBAA),,,,,,,,,Exterior,,false
+LFBO,AEROPORTO FORA DO CADASTRO ANAC (LFBO),,,,,,,,,Exterior,,false
+HAAB,AEROPORTO FORA DO CADASTRO ANAC (HAAB),,,,,,,,,Exterior,,false
+SBBW,Barra do Garças,BARRA DO GARÇAS,Barra do Garças,Mato Grosso,-15.861389,-52.388889,350.0,VFR / IFR Não Precisão,true,Brasil,-4,true
+SDOW,Ourilândia do Norte,OURILÂNDIA DO NORTE,Ourilândia do Norte,Pará,-6.7630556,-51.05,229.0,VFR,true,Brasil,-3,true
+SBCT,Afonso Pena,CURITIBA,Curitiba,Paraná,-25.531667,-49.176111,911.0,VFR / IFR - CAT II,true,Brasil,-3,true
+SACO,AEROPORTO FORA DO CADASTRO ANAC (SACO),,,,,,,,,Exterior,,false
+SNAB,Araripina,ARARIPINA,Araripina,Pernambuco,-7.5863889,-40.535278,740.0,,,Brasil,-3,true
+DNMN,AEROPORTO FORA DO CADASTRO ANAC (DNMN),,,,,,,,,Exterior,,false
+SBBH,Pampulha - Carlos Drummond de Andrade,BELO HORIZONTE,Belo Horizonte,Minas Gerais,-19.851944,-43.950556,789.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SBSO,Regional de Sorriso Adolino Bedin,SORRISO,Sorriso,Mato Grosso,-12.472778,-55.668889,386.0,VFR / IFR Não Precisão,true,Brasil,-4,true
+SBDO,Dourados,DOURADOS,Dourados,Mato Grosso do Sul,-22.200556,-54.925556,458.0,VFR / IFR Não Precisão,true,Brasil,-4,true
+SBGR,Guarulhos - Governador André Franco Montoro,GUARULHOS,Guarulhos,São Paulo,-23.435556,-46.473056,750.0,VFR / IFR - CAT III A,true,Brasil,-3,true
+SAWH,AEROPORTO FORA DO CADASTRO ANAC (SAWH),,,,,,,,,Exterior,,false
+SWKO,Coari,COARI,Coari,Amazonas,-4.1341667,-63.1325,40.0,Sem Operação,false,Brasil,-4,true
+SWTP,SANTA ISABEL DO RIO NEGRO,SANTA ISABEL DO RIO NEGRO,Santa Isabel do Rio Negro,Amazonas,-0.37861111,-64.993056,43.0,Sem Operação,false,Brasil,-4,true
+OOMS,AEROPORTO FORA DO CADASTRO ANAC (OOMS),,,,,,,,,Exterior,,false
+SBUL,Ten Cel Aviador César Bombonato,UBERLÂNDIA,Uberlândia,Minas Gerais,-18.883611,-48.225278,943.0,VFR / IFR - CAT I,true,Brasil,-3,true
+SEMT,AEROPORTO FORA DO CADASTRO ANAC (SEMT),,,,,,,,,Exterior,,false
+KBOS,AEROPORTO FORA DO CADASTRO ANAC (KBOS),,,,,,,,,Exterior,,false
+SBPL,Aeroporto Internacional Senador Nilo Coelho,PETROLINA,Petrolina,Pernambuco,-9.3675,-40.563611,384.0,,,Brasil,-3,true
+TJBQ,AEROPORTO FORA DO CADASTRO ANAC (TJBQ),,,,,,,,,Exterior,,false
+LPPT,AEROPORTO FORA DO CADASTRO ANAC (LPPT),,,,,,,,,Exterior,,false
+SCFA,AEROPORTO FORA DO CADASTRO ANAC (SCFA),,,,,,,,,Exterior,,false
+SGES,AEROPORTO FORA DO CADASTRO ANAC (SGES),,,,,,,,,Exterior,,false
+MMUN,AEROPORTO FORA DO CADASTRO ANAC (MMUN),,,,,,,,,Exterior,,false
+EGLL,AEROPORTO FORA DO CADASTRO ANAC (EGLL),,,,,,,,,Exterior,,false
+SBML,Frank Miloye Milenkovich,MARÍLIA,Marília,São Paulo,-22.196944,-49.926389,650.0,,,Brasil,-3,true
+SCDA,AEROPORTO FORA DO CADASTRO ANAC (SCDA),,,,,,,,,Exterior,,false
+SBEG,Eduardo Gomes,MANAUS,Manaus,Amazonas,-3.0411111,-60.050556,80.0,,,Brasil,-4,true
+SBZM,Presidente Itamar Franco,GOIANÁ,Goianá,Minas Gerais,-21.513056,-43.173056,412.0,IFR Não Precisão,true,Brasil,-3,true
+SBRD,Rondonópolis - Maestro Marinho Franco,RONDONÓPOLIS,Rondonópolis,Mato Grosso,-16.588056,-54.721667,447.0,,,Brasil,-4,true
+KSFO,AEROPORTO FORA DO CADASTRO ANAC (KSFO),,,,,,,,,Exterior,,false
+SBJA,Regional Sul,JAGUARUNA,Jaguaruna,Santa Catarina,-28.675278,-49.059444,35.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+ZSPD,AEROPORTO FORA DO CADASTRO ANAC (ZSPD),,,,,,,,,Exterior,,false
+SIPA,AEROPORTO FORA DO CADASTRO ANAC (SIPA),,,,,,,,,Brasil,,false
+MMMX,AEROPORTO FORA DO CADASTRO ANAC (MMMX),,,,,,,,,Exterior,,false
+PANC,AEROPORTO FORA DO CADASTRO ANAC (PANC),,,,,,,,,Exterior,,false
+SLLP,AEROPORTO FORA DO CADASTRO ANAC (SLLP),,,,,,,,,Exterior,,false
+SVPR,AEROPORTO FORA DO CADASTRO ANAC (SVPR),,,,,,,,,Exterior,,false
+LEMD,AEROPORTO FORA DO CADASTRO ANAC (LEMD),,,,,,,,,Exterior,,false
+SBAQ,Bartolomeu de Gusmão,ARARAQUARA,Araraquara,São Paulo,-21.811944,-48.133056,711.0,,,Brasil,-3,true
+SDUB,Estadual Gastão Madeira,UBATUBA,Ubatuba,São Paulo,-23.441389,-45.076111,3.0,Sem Operação,false,Brasil,-3,true
+SBMD,Monte Dourado,ALMEIRIM,Almeirim,Pará,-0.88972222,-52.602222,206.0,,,Brasil,-3,true
+SBJD,Comandante Rolim Adolfo Amaro,JUNDIAÍ,Jundiaí,São Paulo,-23.181667,-46.943611,753.0,VFR / IFR Não Precisão,true,Brasil,-3,true
+SDLO,AEROPORTO FORA DO CADASTRO ANAC (SDLO),,,,,,,,,Brasil,,false
+SBAA,Conceição do Araguaia,CONCEIÇÃO DO ARAGUAIA,Conceição do Araguaia,Pará,-8.3486111,-49.303056,199.0,,,Brasil,-3,true
+SWLB,Lábrea,LÁBREA,Lábrea,Amazonas,-7.2788889,-64.769444,74.0,,,Brasil,-4,true
+SBRP,Leite Lopes,RIBEIRÃO PRETO,Ribeirão Preto,São Paulo,-21.136389,-47.776667,550.0,,,Brasil,-3,true
+EGNX,AEROPORTO FORA DO CADASTRO ANAC (EGNX),,,,,,,,,Exterior,,false
+SNDC,Redenção,REDENÇÃO,Redenção,Pará,-8.0311111,-49.979722,207.0,,,Brasil,-3,true
+KDAL,AEROPORTO FORA DO CADASTRO ANAC (KDAL),,,,,,,,,Exterior,,false
+TLPL,AEROPORTO FORA DO CADASTRO ANAC (TLPL),,,,,,,,,Exterior,,false
+GMAD,AEROPORTO FORA DO CADASTRO ANAC (GMAD),,,,,,,,,Exterior,,false
+EGSS,AEROPORTO FORA DO CADASTRO ANAC (EGSS),,,,,,,,,Exterior,,false
+HTDA,AEROPORTO FORA DO CADASTRO ANAC (HTDA),,,,,,,,,Exterior,,false
+MPPA,AEROPORTO FORA DO CADASTRO ANAC (MPPA),,,,,,,,,Exterior,,false
+MUHA,AEROPORTO FORA DO CADASTRO ANAC (MUHA),,,,,,,,,Exterior,,false
+WMKK,AEROPORTO FORA DO CADASTRO ANAC (WMKK),,,,,,,,,Exterior,,false
+SDC9,AEROPORTO FORA DO CADASTRO ANAC (SDC9),,,,,,,,,Brasil,,false
+LGTS,AEROPORTO FORA DO CADASTRO ANAC (LGTS),,,,,,,,,Exterior,,false
+MMAA,AEROPORTO FORA DO CADASTRO ANAC (MMAA),,,,,,,,,Exterior,,false
+LEVT,AEROPORTO FORA DO CADASTRO ANAC (LEVT),,,,,,,,,Exterior,,false
+SI8W,AEROPORTO FORA DO CADASTRO ANAC (SI8W),,,,,,,,,Brasil,,false
+SDIM,Dr. Antonio Ribeiro Nogueira Júnior,ITANHAÉM,Itanhaém,São Paulo,-24.164722,-46.785556,3.0,VFR,true,Brasil,-3,true
+KAFW,AEROPORTO FORA DO CADASTRO ANAC (KAFW),,,,,,,,,Exterior,,false
+SCNT,AEROPORTO FORA DO CADASTRO ANAC (SCNT),,,,,,,,,Exterior,,false
+SKCC,AEROPORTO FORA DO CADASTRO ANAC (SKCC),,,,,,,,,Exterior,,false
+LFTM,AEROPORTO FORA DO CADASTRO ANAC (LFTM),,,,,,,,,Exterior,,false
+ESGG,AEROPORTO FORA DO CADASTRO ANAC (ESGG),,,,,,,,,Exterior,,false
+KGSP,AEROPORTO FORA DO CADASTRO ANAC (KGSP),,,,,,,,,Exterior,,false
+EDHI,AEROPORTO FORA DO CADASTRO ANAC (EDHI),,,,,,,,,Exterior,,false
+BIKF,AEROPORTO FORA DO CADASTRO ANAC (BIKF),,,,,,,,,Exterior,,false
+CYYR,AEROPORTO FORA DO CADASTRO ANAC (CYYR),,,,,,,,,Exterior,,false
+LPLA,AEROPORTO FORA DO CADASTRO ANAC (LPLA),,,,,,,,,Exterior,,false
+SAZN,AEROPORTO FORA DO CADASTRO ANAC (SAZN),,,,,,,,,Exterior,,false
+SCSE,AEROPORTO FORA DO CADASTRO ANAC (SCSE),,,,,,,,,Exterior,,false
+SARI,AEROPORTO FORA DO CADASTRO ANAC (SARI),,,,,,,,,Exterior,,false
+SNTQ,Buritirama,BURITIRAMA,Buritirama,Bahia,-10.721667,-43.653611,499.0,,,Brasil,-3,true
+SCCF,AEROPORTO FORA DO CADASTRO ANAC (SCCF),,,,,,,,,Exterior,,false
+KCLK,AEROPORTO FORA DO CADASTRO ANAC (KCLK),,,,,,,,,Exterior,,false
+NTAA,AEROPORTO FORA DO CADASTRO ANAC (NTAA),,,,,,,,,Exterior,,false
+SCIE,AEROPORTO FORA DO CADASTRO ANAC (SCIE),,,,,,,,,Exterior,,false
+SNBS,Balsas,BALSAS,Balsas,Maranhão,-7.5252778,-46.053333,284.0,,,Brasil,-3,true
+SECU,AEROPORTO FORA DO CADASTRO ANAC (SECU),,,,,,,,,Exterior,,false
+SBIC,Itacoatiara,ITACOATIARA,Itacoatiara,Amazonas,-3.1263889,-58.481667,43.0,,,Brasil,-4,true
+DNAA,AEROPORTO FORA DO CADASTRO ANAC (DNAA),,,,,,,,,Exterior,,false
+EPWA,AEROPORTO FORA DO CADASTRO ANAC (EPWA),,,,,,,,,Exterior,,false
+ESMS,AEROPORTO FORA DO CADASTRO ANAC (ESMS),,,,,,,,,Exterior,,false
+VOMM,AEROPORTO FORA DO CADASTRO ANAC (VOMM),,,,,,,,,Exterior,,false
+KLAS,AEROPORTO FORA DO CADASTRO ANAC (KLAS),,,,,,,,,Exterior,,false
+SAMU,AEROPORTO FORA DO CADASTRO ANAC (SAMU),,,,,,,,,Exterior,,false
+SANU,AEROPORTO FORA DO CADASTRO ANAC (SANU),,,,,,,,,Exterior,,false
+HKJK,AEROPORTO FORA DO CADASTRO ANAC (HKJK),,,,,,,,,Exterior,,false
+EDFH,AEROPORTO FORA DO CADASTRO ANAC (EDFH),,,,,,,,,Exterior,,false
+MNMG,AEROPORTO FORA DO CADASTRO ANAC (MNMG),,,,,,,,,Exterior,,false
+TNCM,AEROPORTO FORA DO CADASTRO ANAC (TNCM),,,,,,,,,Exterior,,false
+KMZJ,AEROPORTO FORA DO CADASTRO ANAC (KMZJ),,,,,,,,,Exterior,,false
+EDLN,AEROPORTO FORA DO CADASTRO ANAC (EDLN),,,,,,,,,Exterior,,false
+DTTA,AEROPORTO FORA DO CADASTRO ANAC (DTTA),,,,,,,,,Exterior,,false
+KFPR,AEROPORTO FORA DO CADASTRO ANAC (KFPR),,,,,,,,,Exterior,,false
+KIWA,AEROPORTO FORA DO CADASTRO ANAC (KIWA),,,,,,,,,Exterior,,false
+KTUS,AEROPORTO FORA DO CADASTRO ANAC (KTUS),,,,,,,,,Exterior,,false
+SEQU,AEROPORTO FORA DO CADASTRO ANAC (SEQU),,,,,,,,,Exterior,,false
+FZQA,AEROPORTO FORA DO CADASTRO ANAC (FZQA),,,,,,,,,Exterior,,false
+KHSV,AEROPORTO FORA DO CADASTRO ANAC (KHSV),,,,,,,,,Exterior,,false
+LETL,AEROPORTO FORA DO CADASTRO ANAC (LETL),,,,,,,,,Exterior,,false
+LHBP,AEROPORTO FORA DO CADASTRO ANAC (LHBP),,,,,,,,,Exterior,,false
+KSAV,AEROPORTO FORA DO CADASTRO ANAC (KSAV),,,,,,,,,Exterior,,false
+EPRZ,AEROPORTO FORA DO CADASTRO ANAC (EPRZ),,,,,,,,,Exterior,,false
+KGWO,AEROPORTO FORA DO CADASTRO ANAC (KGWO),,,,,,,,,Exterior,,false
+EDDR,AEROPORTO FORA DO CADASTRO ANAC (EDDR),,,,,,,,,Exterior,,false
+OTBD,AEROPORTO FORA DO CADASTRO ANAC (OTBD),,,,,,,,,Exterior,,false
+KHRL,AEROPORTO FORA DO CADASTRO ANAC (KHRL),,,,,,,,,Exterior,,false
+SBJC,AEROPORTO FORA DO CADASTRO ANAC (SBJC),,,,,,,,,Brasil,,false
+KTUL,AEROPORTO FORA DO CADASTRO ANAC (KTUL),,,,,,,,,Exterior,,false
