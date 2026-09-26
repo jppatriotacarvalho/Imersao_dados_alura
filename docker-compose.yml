@@ -1,0 +1,73 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: voebem-mysql
+    # Roda como o usuário "mysql" desde o início. Como root, o script de
+    # inicialização da imagem tenta mudar o dono de /var/lib/mysql-files
+    # (chown); como essa pasta é montada só-leitura (:ro), o chown falha e o
+    # contêiner morre antes de carregar qualquer coisa.
+    user: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-voebem}   # senha local de desenvolvimento
+    ports:
+      - "3307:3306"            # 3306 já é do MySQL instalado no Windows
+    volumes:
+      # rodam em ordem alfabética, só na primeira vez que o banco nasce
+      - ./sql/schema_mysql.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./sql/01_carga_voebem_PRONTO.sql:/docker-entrypoint-initdb.d/02_carga.sql:ro
+      - ./dados/export:/var/lib/mysql-files:ro     # os 7 CSVs da gold
+      - ./sql:/sql:ro                              # para rodar o placar
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      # 127.0.0.1 (TCP) de propósito: durante a carga o MySQL roda sem rede,
+      # então o contêiner só fica "healthy" depois que a carga termina.
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p\"$$MYSQL_ROOT_PASSWORD\" --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+      start_period: 30s
+
+  web:
+    image: nginx:alpine
+    container_name: voebem-web
+    ports:
+      - "127.0.0.1:8080:80"    # só este computador abre o site (não fica exposto na rede)
+    volumes:
+      # SÓ os arquivos públicos. Montar a raiz inteira publicaria agente_ia/.env.
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./assets:/usr/share/nginx/html/assets:ro
+      - ./dados/painel.json:/usr/share/nginx/html/dados/painel.json:ro
+      - ./nginx/voebem.conf:/etc/nginx/conf.d/default.conf:ro   # repassa /api/ para o contêiner "api"
+
+  # Servidor da caixa de perguntas do site. Lê as chaves do agente_ia/.env.
+  # Não publica porta: só o nginx (web) fala com ele, pela rede interna do Docker.
+  api:
+    build: ./agente_ia
+    container_name: voebem-api
+    entrypoint: ["python", "servidor.py"]
+    env_file:
+      - path: ./agente_ia/.env
+        required: false        # sem .env ele sobe e a página avisa que faltam as chaves
+    expose:
+      - "8000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/saude', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+
+  agente:
+    build: ./agente_ia
+    container_name: voebem-agente
+    profiles: ["ia"]           # não sobe no "docker compose up"; só com "run"
+    env_file:
+      - path: ./agente_ia/.env
+        required: false        # sem .env o contêiner sobe; o agente avisa que falta a chave
+    volumes:
+      - ./agente_ia/resultados:/app/resultados
+    stdin_open: true
+    tty: true
+
+volumes:
+  mysql_data:
