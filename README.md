@@ -30,17 +30,6 @@ Os números descrevem os registros da [base VRA da ANAC](https://www.gov.br/anac
 
 O projeto analisa mais de **1 milhão de registros (1.014.705 registros de voo)** da base VRA (Voo Regular Ativo) da ANAC entre agosto/2025 e julho/2026.
 
-```mermaid
-graph LR
-    A[Dados Abertos ANAC<br/>12 CSVs VRA + Cadastros] --> B[Databricks Lakehouse<br/>Medalhão: Bronze → Silver → Gold]
-    B -->|7 tabelas da gold em CSV| C[Docker Compose: MySQL 8.4<br/>7 Tabelas + 18 Testes Automatizados]
-    B -->|pré-agregação| D[dados/painel.json<br/>358 KB analítico]
-    D --> E[Docker Compose: Nginx Web<br/>Site: Dashboard e Agente de IA]
-    B --> F[Camada de IA: google-genai<br/>Texto → SQL com Governança e Regras]
-    E -->|/api/perguntar| G[Docker Compose: servidor do agente<br/>guarda as chaves do .env]
-    G --> F
-```
-
 1. **Camada Lakehouse (Databricks):** 3 notebooks (`01_bronze.py`, `02_silver.py`, `03_gold.py`), aplicando 6 regras de negócio fundamentadas em dados.
 2. **Camada Relacional & Testes (MySQL 8.4 em Docker):** As 7 tabelas da gold (dimensões e agregados) carregadas e validadas por 18 asserções automatizadas (`sql/03_placar.sql`).
 3. **Site (Nginx no Docker):** um único `index.html` com menu à esquerda e 2 páginas (abre no Dashboard):
